@@ -1,2 +1,2 @@
-# kibord-events
-my kibord event games
+#Simple Python training
+Simple Python training
