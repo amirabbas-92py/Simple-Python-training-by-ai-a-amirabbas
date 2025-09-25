@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>آموزش جامع پایتون</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap');
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #f3f4f6;
+            direction: rtl;
+            text-align: right;
+        }
+        .container {
+            max-width: 900px;
+        }
+        .code-block {
+            background-color: #1f2937;
+            color: #d1d5db;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+            position: relative;
+        }
+        .copy-btn {
+            position: absolute;
+            left: 0.5rem;
+            top: 0.5rem;
+            background-color: #4b5563;
+            color: white;
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.25rem;
+            cursor: pointer;
+            font-size: 0.8rem;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 0.75rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body class="p-6">
+    <div class="container mx-auto bg-white shadow-xl rounded-2xl p-6 md:p-10 mt-8">
+        <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-2 border-b-4 border-blue-500 pb-2">برنامه‌نویسی (پایتون)</h1>
+        <p class="text-gray-600 mb-8">یک راهنمای کامل و تصویری برای یادگیری زبان برنامه‌نویسی پایتون.</p>
+
+        <!-- درس 1: سفر هیجان‌انگیز به دنیای پایتون -->
+        <h2 class="text-3xl font-bold text-gray-800 mt-8 mb-4">درس ۱: سفر هیجان‌انگیز به دنیای پایتون</h2>
+        <p class="text-gray-700 leading-relaxed mb-4">پایتون یک زبان برنامه‌نویسی قدرتمند، همه‌کاره و آسان برای یادگیری است که در زمینه‌های مختلفی از جمله توسعه وب، تحلیل داده و هوش مصنوعی کاربرد دارد.</p>
+        <div class="flex justify-center my-4">
+            <img src="https://placehold.co/700x400/3182CE/FFFFFF?text=Python_Journey" alt="سفر هیجان‌انگیز به دنیای پایتون">
+        </div>
+        
+        <!-- درس 2: شروع ماجراجویی -->
+        <h2 class="text-3xl font-bold text-gray-800 mt-8 mb-4">درس ۲: شروع ماجراجویی</h2>
+        <p class="text-gray-700 leading-relaxed mb-4">ماجراجویی برنامه‌نویسی شما با پایتون با نصب ابزارهای لازم شروع می‌شود.</p>
+
+        <!-- درس 3: نصب پایتون -->
+        <h2 class="text-3xl font-bold text-gray-800 mt-8 mb-4">درس ۳: نصب پایتون</h2>
+        <p class="text-gray-700 leading-relaxed">برای شروع کار، ابتدا باید پایتون را روی سیستم خود نصب کنید. به وب‌سایت رسمی پایتون بروید و آخرین نسخه پایدار را دانلود کنید. هنگام نصب، حتماً گزینه "Add Python to PATH" را فعال کنید.</p>
+        <div class="flex justify-center my-4">
+            <img src="https://placehold.co/700x400/9b59b6/FFFFFF?text=Python_Installation" alt="نصب پایتون">
+        </div>
+
+        <!-- درس 4: نصب IDE -->
+        <h2 class="text-3xl font-bold text-gray-800 mt-8 mb-4">درس ۴: نصب IDE</h2>
+        <p class="text-gray-700 leading-relaxed">یک محیط توسعه یکپارچه (IDE) مثل VS Code یا PyCharm به شما در نوشتن و مدیریت کد کمک می‌کند.</p>
+        <div class="flex justify-center my-4">
+            <img src="https://placehold.co/700x400/2ecc71/FFFFFF?text=Install_IDE" alt="نصب IDE">
+        </div>
+
+        <!-- درس 5: انجام یکسری تنظیمات مهم -->
+        <h2 class="text-3xl font-bold text-gray-800 mt-8 mb-4">درس ۵: انجام یکسری تنظیمات مهم</h2>
+        <p class="text-gray-700 leading-relaxed">بعد از نصب، چند تنظیمات کوچک در IDE می‌تواند تجربه برنامه‌نویسی شما را بهبود ببخشد.</p>
+
+        <!-- درس 6: آشنایی با shell پایتون -->
+        <h2 class="text-3xl font-bold text-gray-800 mt-8 mb-4">درس ۶: آشنایی با shell پایتون</h2>
+        <p class="text-gray-700 leading-relaxed">شِل پایتون یک محیط تعاملی است که به شما اجازه می‌دهد کد را خط به خط اجرا کنید.</p>
+        <div class="code-block mt-4 mb-8" data-code-block>
+            <button class="copy-btn" onclick="copyCode(this)">کپی</button>
+            <pre><code>>>> 2 + 2
+4
+>>> "hello" + " world"
+'hello world'</code></pre>
+        </div>
+        <p class="text-gray-700 leading-relaxed mt-4">مثال ۲: استفاده از متغیرها در شل</p>
+        <div class="code-block mt-4 mb-8" data-code-block>
+            <button class="copy-btn" onclick="copyCode(this)">کپی</button>
+            <pre><code>>>> x = 10
+>>> print(x * 5)
+50</code></pre>
+        </div>
+
+        <!-- درس 7: متغیر یا Variable -->
+        <h2 class="text-3xl font-bold text-gray-800 mt-8 mb-4">درس ۷: متغیر یا Variable</h2>
+        <p class="text-gray-700 leading-relaxed">متغیرها برای ذخیره داده‌ها در حافظه استفاده می‌شوند. شما می‌توانید هر نوع داده‌ای را در یک متغیر ذخیره کنید.</p>
+        <div class="flex justify-center my-4">
+            <img src="https://placehold.co/700x400/3498db/FFFFFF?text=Python_Variables" alt="متغیرها در پایتون">
+        </div>
+        <div class="code-block mt-4 mb-8" data-code-block>
+            <button class="copy-btn" onclick="copyCode(this)">کپی</button>
+            <pre><code>name = "Sina"
+age = 22</code></pre>
+        </div>
+        <p class="text-gray-700 leading-relaxed mt-4">مثال ۲: تغییر مقدار یک متغیر</p>
+        <div class="code-block mt-4 mb-8" data-code-block>
+            <button class="copy-btn" onclick="copyCode(this)">کپی</button>
+            <pre><code>x = 10
+x = x + 5 # حالا مقدار x برابر 15 است.</code></pre>
+        </div>
+
+        <!-- درس 8: انواع داده‌ها -->
+        <h2 class="text-3xl font-bold text-gray-800 mt-8 mb-4">درس ۸: انواع داده‌ها در پایتون - datatypes</h2>
+        <p class="text-gray-700 leading-relaxed">پایتون دارای انواع داده مختلفی است، از جمله رشته (String)، عدد (Integer و Float)، بولین (Boolean) و ... .</p>
+        <div class="code-block mt-4 mb-8" data-code-block>
+            <button class="copy-btn" onclick="copyCode(this)">کپی</button>
+            <pre><code># مثال از انواع داده
+text = "Hello" # رشته
+number = 100 # عدد صحیح
+decimal = 10.5 # عدد اعشاری
+is_valid = True # بولین</code></pre>
+        </div>
+        <p class="text-gray-700 leading-relaxed mt-4">مثال ۲: چک کردن نوع داده</p>
+        <div class="code-block mt-4 mb-8" data-code-block>
+            <button class="copy-btn" onclick="copyCode(this)">کپی</button>
+            <pre><code>print(type(text))
+print(type(number))</code></pre>
+        </div>
+
+        <!-- درس 9: جدول انواع داده‌ها -->
+        <h2 class="text-3xl font-bold text-gray-800 mt-8 mb-4">درس ۹: جدول انواع داده‌ها</h2>
+        <p class="text-gray-700 leading-relaxed">این جدول به شما کمک می‌کند تا انواع داده‌های اصلی را بهتر بشناسید.</p>
+        <div class="flex justify-center my-4">
+            <img src="https://placehold.co/700x400/e74c3c/FFFFFF?text=Python_Datatypes_Table" alt="جدول انواع داده در پایتون">
+        </div>
+
+        <!-- درس 10: اجرای فایل در VS Code -->
+        <h2 class="text-3xl font-bold text-gray-800 mt-8 mb-4">درس ۱۰: اجرای فایل پایتونی در محیط vs_code</h2>
+        <p class="text-gray-700 leading-relaxed">با استفاده از ترمینال داخلی VS Code، می‌توانید فایل پایتون خود را به راحتی اجرا کنید. کافیست روی فایل راست کلیک کرده و "Run Python File in Terminal" را انتخاب کنید.</p>
+
+        <!-- درس 11: اجرای فایل در cmd -->
+        <h2 class="text-3xl font-bold text-gray-800 mt-8 mb-4">درس ۱۱: اجرای فایل پایتونی در محیط cmd ویندوز</h2>
+        <p class="text-gray-700 leading-relaxed">برای اجرای فایل در محیط CMD، ابتدا با دستور `cd` به پوشه‌ای که فایل در آن قرار دارد بروید و سپس دستور `python your_file.py` را اجرا کنید.</p>
+        <div class="code-block mt-4 mb-8" data-code-block>
+            <button class="copy-btn" onclick="copyCode(this)">کپی</button>
+            <pre><code>cd C:\Users\YourName\Documents
+python my_program.py</code></pre>
+        </div>
+
+        <!-- درس 12: کار با اعداد -->
+        <h2 class="text-3xl font-bold text-gray-800 mt-8 mb-4">درس ۱۲: کار با اعداد و محاسبات ریاضی در پایتون</h2>
+        <p class="text-gray-700 leading-relaxed">پایتون از تمامی عملگرهای ریاضی مانند جمع، تفریق، ضرب و تقسیم پشتیبانی می‌کند.</p>
+        <div class="code-block mt-4 mb-8" data-code-block>
+            <button class="copy-btn" onclick="copyCode(this)">کپی</button>
+            <pre><code>result_sum = 10 + 5
+result_sub = 10 - 5
+result_mul = 10 * 5
+result_div = 10 / 5
+print(f"جمع: {result_sum}, تفریق: {result_sub}, ضرب: {result_mul}, تقسیم: {result_div}")</code></pre>
+        </div>
+        <p class="text-gray-700 leading-relaxed mt-4">مثال ۲: استفاده از توان و باقیمانده</p>
+        <div class="code-block mt-4 mb-8" data-code-block>
+            <button class="copy-btn" onclick="copyCode(this)">کپی</button>
+            <pre><code>power = 2 ** 3 # 2 به توان 3
+remainder = 10 % 3 # باقیمانده تقسیم 10 بر 3
+print(f"توان: {power}, باقیمانده: {remainder}")</code></pre>
+        </div>
+
+        <!-- درس 13: اولویت عملگرها -->
+        <h2 class="text-3xl font-bold text-gray-800 mt-8 mb-4">درس ۱۳: اولویت عملگرها</h2>
+        <p class="text-gray-700 leading-relaxed">پایتون از قوانین استاندارد ریاضی برای اولویت عملگرها (PEMDAS) پیروی می‌کند. پرانتز، توان، ضرب/تقسیم، و سپس جمع/تفریق.</p>
+        <div class="code-block mt-4 mb-8" data-code-block>
+            <button class="copy-btn" onclick="copyCode(this)">کپی</button>
+            <pre><code>result = 10 + 5 * 2 # ابتدا ضرب انجام می‌شود
+print(result) # 20</code></pre>
+        </div>
+        <p class="text-gray-700 leading-relaxed mt-4">مثال ۲: استفاده از پرانتز برای تغییر اولویت</p>
+        <div class="code-block mt-4 mb-8" data-code-block>
+            <button class="copy-btn" onclick="copyCode(this)">کپی</button>
+            <pre><code>result = (10 + 5) * 2 # ابتدا جمع انجام می‌شود
+print(result) # 30</code></pre>
+        </div>
+
+        <!-- درس 14: کار با استرینگ‌ها -->
+        <h2 class="text-3xl font-bold text-gray-800 mt-8 mb-4">درس ۱۴: کار با استرینگ‌ها</h2>
+        <p class="text-gray-700 leading-relaxed">رشته‌ها (Strings) برای ذخیره متن استفاده می‌شوند. آن‌ها با نقل‌قول دوتایی یا تکی تعریف می‌شوند.</p>
+        <div class="code-block mt-4 mb-8" data-code-block>
+            <button class="copy-btn" onclick="copyCode(this)">کپی</button>
+            <pre><code>text1 = "Hello Python"
+text2 = 'آموزش پایتون'
+combined = text1 + " - " + text2
+print(combined)</code></pre>
+        </div>
+        <p class="text-gray-700 leading-relaxed mt-4">مثال ۲: تکرار رشته</p>
+        <div class="code-block mt-4 mb-8" data-code-block>
+            <button class="copy-btn" onclick="copyCode(this)">کپی</button>
+            <pre><code>repeated_text = "آها " * 3
+print(repeated_text) # آها آها آها </code></pre>
+        </div>
+
+        <!-- درس 15: مفهوم ایندکسینگ و استرینگ‌ها -->
+        <h2 class="text-3xl font-bold text-gray-800 mt-8 mb-4">درس ۱۵: مفهوم ایندکسینگ و استرینگ‌ها</h2>
+        <p class="text-gray-700 leading-relaxed">هر کاراکتر در یک رشته یک ایندکس (موقعیت) دارد که با صفر شروع می‌شود.</p>
+        <div class="code-block mt-4 mb-8" data-code-block>
+            <button class="copy-btn" onclick="copyCode(this)">کپی</button>
+            <pre><code>my_string = "Python"
+print(my_string[0]) # 'P'
+print(my_string[2]) # 't'
+print(my_string[-1]) # 'n' (آخرین کاراکتر)</code></pre>
+        </div>
+        <p class="text-gray-700 leading-relaxed mt-4">مثال ۲: برش (Slicing) رشته‌ها</p>
+        <div class="code-block mt-4 mb-8" data-code-block>
+            <button class="copy-btn" onclick="copyCode(this)">کپی</button>
+            <pre><code>slice_text = "Hello World"
+print(slice_text[0:5]) # 'Hello'
+print(slice_text[6:])  # 'World'</code></pre>
+        </div>
+
+        <!-- درس 16: متدهای پرکاربرد در string -->
+        <h2 class="text-3xl font-bold text-gray-800 mt-8 mb-4">درس ۱۶: متدهای پرکاربرد در string</h2>
+        <p class="text-gray-700 leading-relaxed">متدها توابعی هستند که روی اشیاء عمل می‌کنند.</p>
+        <div class="code-block mt-4 mb-8" data-code-block>
+            <button class="copy-btn" onclick="copyCode(this)">کپی</button>
+            <pre><code>name = "alireza"
+print(name.upper()) # 'ALIREZA'
+print(name.capitalize()) # 'Alireza'</code></pre>
+        </div>
+        <p class="text-gray-700 leading-relaxed mt-4">مثال ۲: جایگزینی و یافتن متن</p>
+        <div class="code-block mt-4 mb-8" data-code-block>
+            <button class="copy-btn" onclick="copyCode(this)">کپی</button>
+            <pre><code>sentence = "I love Python"
+new_sentence = sentence.replace("Python", "Programming")
+print(new_sentence) # 'I love Programming'
+print(sentence.find("Python")) # 7 (ایندکس شروع)</code></pre>
+        </div>
+
+        <!-- درس 17: مفهوم کامنت‌گذاری -->
+        <h2 class="text-3xl font-bold text-gray-800 mt-8 mb-4">درس ۱۷: مفهوم کامنت‌گذاری در پایتون</h2>
+        <p class="text-gray-700 leading-relaxed">کامنت‌ها خطوطی از کد هستند که توسط مفسر پایتون نادیده گرفته می‌شوند و برای توضیحات استفاده می‌شوند. آن‌ها با `#` شروع می‌شوند.</p>
+        <div class="code-block mt-4 mb-8" data-code-block>
+            <button class="copy-btn" onclick="copyCode(this)">کپی</button>
+            <pre><code># این یک کامنت است که هدف کد را توضیح می‌دهد.
+x = 10 # این کامنت هم در کنار کد قرار می‌گیرد.
+print("Hello")</code></pre>
+        </div>
+        <p class="text-gray-700 leading-relaxed mt-4">مثال ۲: استفاده از چندخطی برای کامنت‌ها</p>
+        <div class="code-block mt-4 mb-8" data-code-block>
+            <button class="copy-btn" onclick="copyCode(this)">کپی</button>
+            <pre><code>"""
+این یک کامنت چند خطی است
+که برای توضیحات طولانی‌تر استفاده می‌شود.
+"""
+print("World")</code></pre>
+        </div>
+
+        <!-- درس 18: داده نوع Boolean -->
+        <h2 class="text-3xl font-bold text-gray-800 mt-8 mb-4">درس ۱۸: داده نوع Boolean</h2>
+        <p class="text-gray-700 leading-relaxed">داده‌های بولین فقط دو مقدار `True` و `False` دارند و برای منطق و تصمیم‌گیری استفاده می‌شوند.</p>
+        <div class="code-block mt-4 mb-8" data-code-block>
+            <button class="copy-btn" onclick="copyCode(this)">کپی</button>
+            <pre><code>is_adult = True
+is_cold = False
+if is_adult:
+    print("شما بزرگسال هستید.")</code></pre>
+        </div>
+        <p class="text-gray-700 leading-relaxed mt-4">مثال ۲: مقایسه و خروجی بولین</p>
+        <div class="code-block mt-4 mb-8" data-code-block>
+            <button class="copy-btn" onclick="copyCode(this)">کپی</button>
+            <pre><code>print(5 > 3) # True
+print(10 == 11) # False</code></pre>
+        </div>
+
+        <!-- درس 19: آشنایی با مفهوم لیست -->
+        <h2 class="text-3xl font-bold text-gray-800 mt-8 mb-4">درس ۱۹: آشنایی با مفهوم لیست در پایتون</h2>
+        <p class="text-gray-700 leading-relaxed">لیست‌ها مجموعه‌ای از آیتم‌ها هستند که مرتب و قابل تغییرند. آن‌ها با براکت `[]` تعریف می‌شوند.</p>
+        <div class="code-block mt-4 mb-8" data-code-block>
+            <button class="copy-btn" onclick="copyCode(this)">کپی</button>
+            <pre><code>fruits = ["apple", "banana", "cherry"]
+numbers = [1, 2, 3, 4]</code></pre>
+        </div>
+        <p class="text-gray-700 leading-relaxed mt-4">مثال ۲: دسترسی به آیتم‌ها از طریق ایندکس</p>
+        <div class="code-block mt-4 mb-8" data-code-block>
+            <button class="copy-btn" onclick="copyCode(this)">کپی</button>
+            <pre><code>print(fruits[0]) # 'apple'
+print(numbers[1:3]) # [2, 3]</code></pre>
+        </div>
+
+        <!-- درس 20 و 21: عملیات روی لیست‌ها -->
+        <h2 class="text-3xl font-bold text-gray-800 mt-8 mb-4">درس ۲۰ و ۲۱: عملیات روی لیست‌ها</h2>
+        <p class="text-gray-700 leading-relaxed">شما می‌توانید به آیتم‌های لیست دسترسی پیدا کنید، آن‌ها را تغییر دهید، اضافه یا حذف کنید.</p>
+        <div class="code-block mt-4 mb-8" data-code-block>
+            <button class="copy-btn" onclick="copyCode(this)">کپی</button>
+            <pre><code>my_list = [1, 2, 3]
+my_list.append(4) # اضافه کردن آیتم
+my_list.remove(2) # حذف کردن آیتم
+print(my_list) # [1, 3, 4]</code></pre>
+        </div>
+        <p class="text-gray-700 leading-relaxed mt-4">مثال ۲: تغییر آیتم و اضافه کردن لیست دیگر</p>
+        <div class="code-block mt-4 mb-8" data-code-block>
+            <button class="copy-btn" onclick="copyCode(this)">کپی</button>
+            <pre><code>colors = ["red", "blue", "green"]
+colors[1] = "yellow"
+print(colors) # ['red', 'yellow', 'green']
+colors.extend(["black", "white"])
+print(colors) # ['red', 'yellow', 'green', 'black', 'white']</code></pre>
+        </div>
+
+        <!-- درس 22: متدهای پرکاربرد در لیست -->
+        <h2 class="text-3xl font-bold text-gray-800 mt-8 mb-4">درس ۲۲: متدهای پرکاربرد در لیست</h2>
+        <p class="text-gray-700 leading-relaxed">متدهایی مانند `sort()`, `reverse()`, `pop()` و ... برای کار با لیست‌ها مفید هستند.</p>
+        <div class="code-block mt-4 mb-8" data-code-block>
+            <button class="copy-btn" onclick="copyCode(this)">کپی</button>
+            <pre><code>numbers = [5, 2, 8, 1]
+numbers.sort()
+print(numbers) # [1, 2, 5, 8]
+last_item = numbers.pop()
+print(last_item) # 8</code></pre>
+        </div>
+        <p class="text-gray-700 leading-relaxed mt-4">مثال ۲: شمردن آیتم‌ها و یافتن ایندکس</p>
+        <div class="code-block mt-4 mb-8" data-code-block>
+            <button class="copy-btn" onclick="copyCode(this)">کپی</button>
+            <pre><code>fruits = ["apple", "banana", "apple"]
+print(fruits.count("apple")) # 2
+print(fruits.index("banana")) # 1</code></pre>
+        </div>
+
+        <!-- درس 23: Tuple در پایتون -->
+        <h2 class="text-3xl font-bold text-gray-800 mt-8 mb-4">درس ۲۳: Tuple در پایتون</h2>
+        <p class="text-gray-700 leading-relaxed">تاپل‌ها شبیه به لیست‌ها هستند اما غیرقابل تغییر (immutable) می‌باشند. آن‌ها با پرانتز `()` تعریف می‌شوند.</p>
+        <div class="code-block mt-4 mb-8" data-code-block>
+            <button class="copy-btn" onclick="copyCode(this)">کپی</button>
+            <pre><code>my_tuple = ("apple", "banana", "cherry")
+print(my_tuple[0])
+# my_tuple[0] = "orange" # این کار باعث خطا می‌شود</code></pre>
+        </div>
+        <p class="text-gray-700 leading-relaxed mt-4">مثال ۲: استفاده از تاپل برای بازگشت مقادیر از یک تابع</p>
+        <div class="code-block mt-4 mb-8" data-code-block>
+            <button class="copy-btn" onclick="copyCode(this)">کپی</button>
+            <pre><code>def get_coordinates():
+    return (10, 20)
+
+x, y = get_coordinates()
+print(x) # 10
+print(y) # 20</code></pre>
+        </div>
+
+        <!-- درس 24: مفهوم ست (Set) -->
+        <h2 class="text-3xl font-bold text-gray-800 mt-8 mb-4">درس ۲۴: مفهوم ست (Set)</h2>
+        <p class="text-gray-700 leading-relaxed">ست‌ها مجموعه‌ای از آیتم‌های منحصربه‌فرد هستند که غیرمرتبند. آن‌ها با آکولاد `{}` تعریف می‌شوند.</p>
+        <div class="code-block mt-4 mb-8" data-code-block>
+            <button class="copy-btn" onclick="copyCode(this)">کپی</button>
+            <pre><code>my_set = {1, 2, 3, 2, 1}
+print(my_set) # {1, 2, 3} (تکراری‌ها حذف می‌شوند)</code></pre>
+        </div>
+        <p class="text-gray-700 leading-relaxed mt-4">مثال ۲: عملیات ریاضی روی ست‌ها</p>
+        <div class="code-block mt-4 mb-8" data-code-block>
+            <button class="copy-btn" onclick="copyCode(this)">کپی</button>
+            <pre><code>set1 = {1, 2, 3}
+set2 = {3, 4, 5}
+union_set = set1.union(set2)
+print(union_set) # {1, 2, 3, 4, 5}
+intersection_set = set1.intersection(set2)
+print(intersection_set) # {3}</code></pre>
+        </div>
+
+        <!-- درس 25: مفهوم دیکشنری (Dictionary) -->
+        <h2 class="text-3xl font-bold text-gray-800 mt-8 mb-4">درس ۲۵: مفهوم دیکشنری (Dictionary)</h2>
+        <p class="text-gray-700 leading-relaxed">دیکشنری‌ها داده‌ها را به صورت جفت‌های کلید-مقدار (key-value) ذخیره می‌کنند.</p>
+        <div class="code-block mt-4 mb-8" data-code-block>
+            <button class="copy-btn" onclick="copyCode(this)">کپی</button>
+            <pre><code>person = {
+    "name": "Mahdi",
+    "age": 25,
+    "city": "Shiraz"
+}
+print(person["name"]) # 'Mahdi'</code></pre>
+        </div>
+        <p class="text-gray-700 leading-relaxed mt-4">مثال ۲: اضافه و تغییر جفت کلید-مقدار</p>
+        <div class="code-block mt-4 mb-8" data-code-block>
+            <button class="copy-btn" onclick="copyCode(this)">کپی</button>
+            <pre><code>person["age"] = 26 # تغییر مقدار
+person["email"] = "mahdi@example.com" # اضافه کردن کلید جدید
+print(person)</code></pre>
+        </div>
+
+        <!-- درس 26: مفهوم پرینت (Print) -->
+        <h2 class="text-3xl font-bold text-gray-800 mt-8 mb-4">درس ۲۶: مفهوم پرینت (Print)</h2>
+        <p class="text-gray-700 leading-relaxed">تابع `print()` برای نمایش خروجی در کنسول استفاده می‌شود. با استفاده از f-string می‌توانید متغیرها را به راحتی در رشته‌ها قرار دهید.</p>
+        <div class="code-block mt-4 mb-8" data-code-block>
+            <button class="copy-btn" onclick="copyCode(this)">کپی</button>
+            <pre><code>name = "Sara"
+print("سلام، " + name + "!")
+print(f"سلام، {name}!")</code></pre>
+        </div>
+        <p class="text-gray-700 leading-relaxed mt-4">مثال ۲: چاپ چندین آیتم</p>
+        <div class="code-block mt-4 mb-8" data-code-block>
+            <button class="copy-btn" onclick="copyCode(this)">کپی</button>
+            <pre><code>print("نام:", "علی", "سن:", 20)</code></pre>
+        </div>
+
+        <!-- درس 27: دستور ورودی -->
+        <h2 class="text-3xl font-bold text-gray-800 mt-8 mb-4">درس ۲۷: دستور ورودی</h2>
+        <p class="text-gray-700 leading-relaxed">تابع `input()` از کاربر ورودی می‌گیرد و همیشه آن را به عنوان یک رشته (string) برمی‌گرداند.</p>
+        <div class="code-block mt-4 mb-8" data-code-block>
+            <button class="copy-btn" onclick="copyCode(this)">کپی</button>
+            <pre><code>name = input("لطفا نام خود را وارد کنید: ")
+print(f"سلام، {name}!")</code></pre>
+        </div>
+        <p class="text-gray-700 leading-relaxed mt-4">مثال ۲: تبدیل ورودی به عدد</p>
+        <div class="code-block mt-4 mb-8" data-code-block>
+            <button class="copy-btn" onclick="copyCode(this)">کپی</button>
+            <pre><code>age_str = input("سن خود را وارد کنید: ")
+age_int = int(age_str)
+print(f"سن شما در ۵ سال آینده: {age_int + 5}")</code></pre>
+        </div>
+
+        <footer class="text-center text-gray-500 mt-12 pt-6 border-t border-gray-300">
+            <p>این آموزش توسط هوش مصنوعی طراحی شده است.</p>
+        </footer>
+    </div>
+    
+    <script>
+        // عملکرد کپی کردن کد
+        function copyCode(button) {
+            const codeBlock = button.parentElement;
+            const pre = codeBlock.querySelector('pre');
+            const code = pre.textContent;
+
+            const tempInput = document.createElement('textarea');
+            document.body.appendChild(tempInput);
+            tempInput.value = code;
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+
+            button.textContent = 'کپی شد!';
+            setTimeout(() => {
+                button.textContent = 'کپی';
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
